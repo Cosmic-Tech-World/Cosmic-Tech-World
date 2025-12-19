@@ -1,0 +1,184 @@
+.direction-analysis-page {
+    background-color: #fcfaff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.da-container {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.da-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.da-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.da-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.da-main-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+}
+
+.da-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.da-center {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mandala-wrapper {
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.mandala-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    max-width: 320px;
+}
+
+.card-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.card-icon i {
+    font-size: 20px;
+    color: #4a90e2;
+}
+
+.analysis-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #333;
+    font-family: 'Outfit', sans-serif;
+}
+
+.analysis-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #777;
+    margin: 0;
+}
+
+/* Connecting Lines */
+.connector-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #ff8c00;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.4);
+    z-index: 5;
+}
+
+.connector-line {
+    position: absolute;
+    border-top: 2px dashed #ff8c00;
+    height: 0;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+/* Specific Positions */
+.left-top .connector-dot {
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-mid .connector-dot {
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-bot .connector-dot {
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-top .connector-dot {
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-mid .connector-dot {
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-bot .connector-dot {
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 1024px) {
+    .da-main-content {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .da-side {
+        width: 100%;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .analysis-card {
+        max-width: 100%;
+    }
+
+    .connector-dot,
+    .connector-line {
+        display: none;
+    }
+}

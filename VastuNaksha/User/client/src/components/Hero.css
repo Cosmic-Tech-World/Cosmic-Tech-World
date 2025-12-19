@@ -1,0 +1,136 @@
+.hero {
+    padding: var(--spacing-md) 0;
+    /* Reduced padding */
+    position: relative;
+    overflow: hidden;
+    /* Changed to hidden to prevent scrollbar if image overlaps */
+}
+
+.hero-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+    /* Ensure height */
+}
+
+.hero-content {
+    max-width: 60%;
+    z-index: 2;
+    /* Ensure text is above image */
+    position: relative;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    /* Reduced from 3rem to fit single line */
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: #000;
+    white-space: nowrap;
+    /* Force single line if possible, or just rely on size */
+}
+
+.hero-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+    /* Increased line height for better readability */
+    margin-bottom: var(--spacing-lg);
+    max-width: 750px;
+    /* Adjusted to greater width to prevent wrapping */
+    /* text-wrap: balance; Optional: helps with even lines */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.btn {
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #333;
+    /* Darker border for visibility */
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.hero-image-wrapper {
+    position: absolute;
+    right: 0;
+    /* Shift to right */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    pointer-events: none;
+    /* Allow clicking through image if needed */
+}
+
+.hero-mandala-img {
+    width: 100%;
+    max-width: 500px;
+    /* Reduced further */
+    height: auto;
+    opacity: 0.8;
+    /* Faded effect as per design */
+    animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 100%;
+        /* Full width on mobile */
+        text-align: center;
+    }
+
+    .hero-container {
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        right: 0;
+        opacity: 0.15;
+    }
+}

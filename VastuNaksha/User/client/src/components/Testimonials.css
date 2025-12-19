@@ -1,0 +1,153 @@
+.testimonials {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--bg-light);
+    overflow: hidden;
+    /* Hide scrollbar */
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0;
+}
+
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.testimonials-header .section-title {
+    color: #F37021;
+    /* Orange color from reference */
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.testimonials-header .section-desc {
+    color: #666;
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonials-marquee {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 60s linear infinite;
+    padding: 40px 0;
+    /* Space for hover scale */
+    padding-left: 20px;
+}
+
+.testimonials-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* Adjust based on duplication count, assuming 3 sets, moving half way might not be perfect loop if not careful. Logic: move length of 1 set */
+    /* Actually with [...reviews, ...reviews, ...reviews], moving -33.33% would shift one full set if equal width. 
+     Let's try -50% for now or tweak based on visual. 
+     Better approach: if we have 3 sets, we want to move 1/3 of the total width.
+  */
+}
+
+/* Let's try to animate 1/3 width (representing the first set) */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% / 3));
+    }
+}
+
+.review-card {
+    background-color: #fff;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    min-width: 350px;
+    /* Fixed width for scrolling consistency */
+    max-width: 350px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+/* Hover Effect: Scale & Sky Blue Gradient */
+.review-card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ffffff 0%, #e0f7fa 100%);
+    /* White to Sky Blue */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: #b2ebf2;
+    /* Subtle blue border */
+    z-index: 10;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    background-image: url('https://placehold.co/40');
+    background-size: cover;
+}
+
+.reviewer-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.reviewer-role {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
