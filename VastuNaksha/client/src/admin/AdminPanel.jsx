@@ -18,14 +18,14 @@ const AdminPanel = () => {
 
         if (key && key.toUpperCase() === 'VASTU2468') {
             setAuthorized(true);
+            setLoading(false);
         } else {
-            navigate('/');
+            setLoading(false);
         }
-        setLoading(false);
-    }, [navigate]);
+    }, []);
 
     if (loading) return <div style={{ padding: '50px', textAlign: 'center' }}>Loading...</div>;
-    if (!authorized) return null;
+    if (!authorized) return <div style={{ padding: '50px', textAlign: 'center', color: 'red' }}>Unauthorized - Invalid Key</div>;
 
     return (
         <div className="admin-panel">
