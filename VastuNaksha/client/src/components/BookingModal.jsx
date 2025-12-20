@@ -35,7 +35,7 @@ const BookingModal = ({ isOpen, onClose }) => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:5000/api/booking/book-call', {
+            const response = await fetch('https://vastunaksha.onrender.com/api/booking/book-call', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

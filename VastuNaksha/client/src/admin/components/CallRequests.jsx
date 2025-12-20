@@ -11,7 +11,7 @@ const CallRequests = () => {
 
     const fetchContacts = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/booking/all');
+            const response = await fetch('https://vastunaksha.onrender.com/api/booking/all');
             const data = await response.json();
             if (data.success) {
                 setContacts(data.data);
@@ -25,7 +25,7 @@ const CallRequests = () => {
 
     const updateStatus = async (id, status) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/booking/status/${id}`, {
+            const response = await fetch(`https://vastunaksha.onrender.com/api/booking/status/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ status })
