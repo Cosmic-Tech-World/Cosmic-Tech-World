@@ -265,9 +265,37 @@
     color: #4A3B2C;
 }
 
+@media (max-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+}
+
 @media (max-width: 768px) {
+    .pricing {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
     .pricing-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-card {
+        padding: 30px var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-price-main {
+        font-size: 1.5rem;
+    }
+
+    .plan-name {
+        font-size: 1.1rem;
     }
 }

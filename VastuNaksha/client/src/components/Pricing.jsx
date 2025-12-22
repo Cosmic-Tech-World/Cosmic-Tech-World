@@ -89,7 +89,11 @@ const Pricing = () => {
                 <h2 className="section-title">Pricing</h2>
                 <div className="pricing-grid">
                     {plans.map((plan, index) => (
-                        <div key={index} className="pricing-card">
+                        <div
+                            key={index}
+                            className="pricing-card animate-fade-in-up"
+                            style={{ animationDelay: `${0.3 * (index + 1)}s` }}
+                        >
                             <div className="active-badge">Active</div>
 
                             <div className="plan-header">

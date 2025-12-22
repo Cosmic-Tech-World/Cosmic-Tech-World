@@ -5,11 +5,11 @@ import logo from '../assets/logo.png';
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="container footer-container">
+            <div className="container footer-container animate-fade-in">
                 <div className="footer-logo">
                     {/* Logo or name */}
                     <span className="logo-text-sm">
-                       <img src={logo} alt="VastuNaksha" className="logo-img-footer" />
+                        <img src={logo} alt="VastuNaksha" className="logo-img-footer" />
                     </span>
                 </div>
                 <div className="footer-copyright">

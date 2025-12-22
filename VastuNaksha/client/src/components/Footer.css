@@ -1,7 +1,8 @@
 .footer {
-    padding: 1rem 0;
+    padding: 2rem 0;
     border-top: 1px solid #eee;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    background-color: #fff;
 }
 
 .footer-container {
@@ -12,7 +13,7 @@
     color: var(--text-muted);
 }
 
-.logo-img-footer{
+.logo-img-footer {
     height: 35px;
 }
 

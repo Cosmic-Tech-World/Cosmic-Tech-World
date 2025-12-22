@@ -13,79 +13,58 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
-    max-width: 400px;
+    width: 100%;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.form-group label {
-    font-weight: 600;
-    font-size: 0.95rem;
-}
-
-.form-group input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     font-size: 1rem;
-    background-color: #ffffff !important;
-    /* Very light background for inputs as per look */
+    background-color: #fafafa !important;
+    transition: border-color 0.3s ease;
 }
 
-.file-upload {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn-upload {
-    padding: 8px 16px;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 0.9rem;
-}
-
-.file-name {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.submit-btn {
-    align-self: flex-start;
-    margin-top: 10px;
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
 }
 
 .consultation-card {
-    background-color: #fff;
-    /* Might be card style */
-    padding: var(--spacing-lg);
-    /* It looks like a clean card possibly with border or shadow? */
-    /* Or just plain text on the right side. Design shows a white card-like area */
+    background-color: var(--bg-light);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.consultation-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-md);
-}
-
-.consultation-card p {
-    color: var(--text-muted);
-    margin-bottom: var(--spacing-md);
-    line-height: 1.5;
-}
-
-.book-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+.btn-dark {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {
+    .section-title-left {
+        text-align: center;
+        font-size: 2rem;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .submit-btn {
+        width: 100%;
     }
 }

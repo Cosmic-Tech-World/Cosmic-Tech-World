@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section className="hero">
             <div className="container hero-container">
-                <div className="hero-content">
+                <div className="hero-content animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
                     <h1 className="hero-title">Your Trusted Vastu Map & Direction Analysis</h1>
                     <p className="hero-subtitle">
                         Get accurate Vastu reports and expert guidance – all online.<br />
@@ -19,7 +19,7 @@ const Hero = () => {
                         <Link to="/check-direction" className="btn btn-outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>Check Directions</Link>
                     </div>
                 </div>
-                <div className="hero-image-wrapper">
+                <div className="hero-image-wrapper animate-fade-in" style={{ animationDelay: '0.5s' }}>
                     <img src={mandala} alt="Vastu Mandala" className="hero-mandala-img" />
                 </div>
             </div>

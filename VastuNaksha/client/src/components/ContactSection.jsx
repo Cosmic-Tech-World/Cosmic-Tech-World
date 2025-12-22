@@ -80,7 +80,7 @@ const ContactSection = () => {
             <div className="container">
                 <h2 className="section-title-left">Contact & Start</h2>
                 <div className="contact-grid">
-                    <div className="contact-form-wrapper">
+                    <div className="contact-form-wrapper animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
                         <form className="contact-form" onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label>Your Name</label>
@@ -139,7 +139,7 @@ const ContactSection = () => {
                         </form>
                     </div>
 
-                    <div className="contact-info-wrapper">
+                    <div className="contact-info-wrapper animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
                         <div className="consultation-card">
                             <h3>Need help deciding?</h3>
                             <p>Book a 20-minute consultation to discuss your property, scope and deliverables.</p>

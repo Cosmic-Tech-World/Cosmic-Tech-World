@@ -76,10 +76,11 @@ const Inspiration = () => {
                     {/* Right Column: Scrollable Grid */}
                     <div className="inspiration-grid-wrapper">
                         <div className="inspiration-grid">
-                            {gridData.map((item) => (
+                            {gridData.map((item, index) => (
                                 <div
                                     key={item.id}
-                                    className="grid-item"
+                                    className="grid-item animate-fade-in-up"
+                                    style={{ animationDelay: `${0.1 * index}s` }}
                                 >
                                     <img src={item.image} alt="Inspiration" className="grid-img" />
                                 </div>
