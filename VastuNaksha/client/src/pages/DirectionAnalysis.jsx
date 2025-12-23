@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './DirectionAnalysis.css';
-import compassImg from '../assets/compass.png';
+import compassImg from '../assets/compass-final.png';
 // Only keeping the compassImg import for now as central element.
 
 const DirectionAnalysis = () => {

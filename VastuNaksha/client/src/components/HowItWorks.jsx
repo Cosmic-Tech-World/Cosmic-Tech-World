@@ -1,6 +1,7 @@
 import React from 'react';
-import vastuGraphic from '../assets/vastu-chart.png';
+import vastuShastraWheel from '../assets/vastu-shastra-color-wheel-scaled.png';
 import patternCircle from '../assets/pattern-circle.png';
+
 import './HowItWorks.css';
 
 const HowItWorks = () => {
@@ -24,7 +25,7 @@ const HowItWorks = () => {
       <div className="container how-container">
         <div className="how-image">
           <img src={patternCircle} alt="" className="how-pattern-bg" />
-          <img src={vastuGraphic} alt="Vastu Analysis Chart" className="how-graphic-img" />
+          <img src={vastuShastraWheel} alt="Vastu Analysis Chart" className="how-graphic-img" />
         </div>
         <div className="how-content">
           <h2 className="section-title-left">How it works</h2>
