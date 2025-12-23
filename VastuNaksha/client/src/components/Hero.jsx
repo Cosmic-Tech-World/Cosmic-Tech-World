@@ -43,6 +43,7 @@ const Hero = () => {
                     </p>
                     <div className="hero-buttons">
                         <button className="btn btn-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Get Started</button>
+                        <Link to="/brochure" className="btn btn-outline" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none' }}>Brochure</Link>
                     </div>
                 </div>
                 <div className="hero-image-wrapper animate-fade-in" style={{ animationDelay: '0.5s' }}>
