@@ -18,16 +18,16 @@
 
 .pricing-card {
     border: 2px solid #D4A373;
-    /* Gold border */
     border-radius: 20px;
     padding: 40px var(--spacing-lg);
-    /* Adjusted padding */
     position: relative;
     transition: all 0.3s ease;
     background-color: #fff;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 600px;
 }
 
 .active-badge {
@@ -59,12 +59,9 @@
 }
 
 .pricing-card:hover .active-badge {
-    background-color: #795e42;
-    border-color: #fff;
-    /* Or match hover border? Design shows white outline or just white text */
+    background-color: #FFD700;
+    border-color: #FFD700;
     color: #fff;
-    border: 1px solid #fff;
-    /* Make it distinct on brown */
 }
 
 .plan-header {
@@ -155,7 +152,8 @@
 }
 
 .plan-features-section {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: auto;
+    flex-grow: 1;
 }
 
 .plan-features {
@@ -205,7 +203,7 @@
 .btn-plan {
     width: auto;
     min-width: 140px;
-    margin: 0 auto;
+    margin: var(--spacing-md) auto 0;
     padding: 10px 24px;
     border-radius: 8px;
     font-weight: 700;
@@ -213,6 +211,7 @@
     background-color: #4A3B2C;
     color: #fff;
     transition: all 0.3s ease;
+    align-self: center;
 }
 
 /* Hover Content Colors */

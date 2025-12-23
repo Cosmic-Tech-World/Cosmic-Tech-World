@@ -9,6 +9,7 @@ const DirectionAnalysis = () => {
     const [heading, setHeading] = useState(0);
     const [permissionGranted, setPermissionGranted] = useState(false);
     const [error, setError] = useState('');
+    const [sensorData, setSensorData] = useState({ alpha: null, beta: null, gamma: null });
 
     useEffect(() => {
         // cleanup on unmount
@@ -47,6 +48,13 @@ const DirectionAnalysis = () => {
     };
 
     const handleOrientation = (e) => {
+        // Update raw sensor data for debugging
+        setSensorData({
+            alpha: e.alpha ? e.alpha.toFixed(2) : 'null',
+            beta: e.beta ? e.beta.toFixed(2) : 'null',
+            gamma: e.gamma ? e.gamma.toFixed(2) : 'null'
+        });
+
         let compass = null;
 
         // iOS
@@ -108,15 +116,22 @@ const DirectionAnalysis = () => {
                                 </div>
 
                                 {!permissionGranted && (
-                                    <button className="btn-start-compass" onClick={handleStartCompass}>
-                                        Enable Live Compass
-                                    </button>
+                                    <div className="compass-controls">
+                                        <button className="btn-start-compass" onClick={handleStartCompass}>
+                                            Enable Live Compass (Mobile)
+                                        </button>
+                                        <p className="compass-note" style={{ marginTop: '10px', fontSize: '0.85rem', color: '#666' }}>
+                                            {!window.isSecureContext && <span style={{ color: 'red', display: 'block', marginBottom: '5px' }}>⚠️ Connection Insecure (HTTP). Sensors may fail.</span>}
+                                            Live compass requires a mobile device with sensors.
+                                        </p>
+                                    </div>
                                 )}
 
                                 {error && <p className="compass-error">{error}</p>}
 
-                                <div className="manual-override">
-                                    <p className="manual-label">Manual Rotation (Simulate):</p>
+                                <div className="manual-override" style={{ marginTop: '25px', borderTop: '1px solid #eee', paddingTop: '20px' }}>
+                                    <p className="manual-label" style={{ fontWeight: '600', color: '#4a90e2' }}>Laptop/PC Mode (Manual Simulation):</p>
+                                    <p style={{ fontSize: '0.8rem', color: '#888', marginBottom: '10px' }}>Drag slider to rotate if sensors are unavailable.</p>
                                     <input
                                         type="range"
                                         min="0"
@@ -125,6 +140,15 @@ const DirectionAnalysis = () => {
                                         onChange={(e) => setHeading(Number(e.target.value))}
                                         className="compass-slider"
                                     />
+
+                                    {/* Debug Info */}
+                                    <div className="sensor-debug" style={{ marginTop: '20px', fontSize: '0.75rem', color: '#999', textAlign: 'left', background: '#f0f0f0', padding: '10px', borderRadius: '4px' }}>
+                                        <strong>Device Sensor Stats:</strong><br />
+                                        Alpha (Z-axis): {sensorData.alpha}<br />
+                                        Beta (X-axis): {sensorData.beta}<br />
+                                        Gamma (Y-axis): {sensorData.gamma}<br />
+                                        {!sensorData.alpha && <span style={{ color: 'orange' }}>Waiting for motion... (If values stay null, device has no sensors)</span>}
+                                    </div>
                                 </div>
                             </div>
                         </div>

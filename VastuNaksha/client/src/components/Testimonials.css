@@ -1,8 +1,8 @@
 .testimonials {
     padding: var(--spacing-lg) 0;
     background-color: var(--bg-light);
-    overflow: hidden;
-    /* Hide scrollbar */
+    overflow: visible;
+    margin-bottom: var(--spacing-xl);
 }
 
 .container-fluid {
@@ -34,8 +34,7 @@
 .testimonials-marquee {
     width: 100%;
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    padding: 20px 0;
 }
 
 .testimonials-track {
@@ -44,7 +43,6 @@
     width: max-content;
     animation: scroll 60s linear infinite;
     padding: 40px 0;
-    /* Space for hover scale */
     padding-left: 20px;
 }
 
@@ -52,23 +50,6 @@
     animation-play-state: paused;
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-
-    /* Adjust based on duplication count, assuming 3 sets, moving half way might not be perfect loop if not careful. Logic: move length of 1 set */
-    /* Actually with [...reviews, ...reviews, ...reviews], moving -33.33% would shift one full set if equal width. 
-     Let's try -50% for now or tweak based on visual. 
-     Better approach: if we have 3 sets, we want to move 1/3 of the total width.
-  */
-}
-
-/* Let's try to animate 1/3 width (representing the first set) */
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -88,7 +69,6 @@
     flex-direction: column;
     gap: var(--spacing-md);
     min-width: 350px;
-    /* Fixed width for scrolling consistency */
     max-width: 350px;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -99,10 +79,8 @@
 .review-card:hover {
     transform: scale(1.05);
     background: linear-gradient(135deg, #ffffff 0%, #e0f7fa 100%);
-    /* White to Sky Blue */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     border-color: #b2ebf2;
-    /* Subtle blue border */
     z-index: 10;
 }
 
@@ -150,4 +128,43 @@
 .reviewer-role {
     font-size: 0.8rem;
     color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        padding: var(--spacing-md) 0;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .testimonials-track {
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .review-card {
+        min-width: 300px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials {
+        padding: var(--spacing-sm) 0;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .testimonials-track {
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    .review-card {
+        min-width: 280px;
+        max-width: 280px;
+        padding: var(--spacing-md);
+    }
+
+    .review-card:hover {
+        transform: scale(1.02);
+    }
 }

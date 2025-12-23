@@ -3,10 +3,26 @@
     background-color: #ffffff;
 }
 
+.section-title-left {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xl);
+    color: #000;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.contact-form-wrapper {
+    width: 100%;
+}
+
+.contact-info-wrapper {
+    width: 100%;
 }
 
 .contact-form {
@@ -14,6 +30,18 @@
     flex-direction: column;
     gap: var(--spacing-md);
     width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
 }
 
 .form-group input,
@@ -24,12 +52,50 @@
     font-size: 1rem;
     background-color: #fafafa !important;
     transition: border-color 0.3s ease;
+    font-family: inherit;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent);
+    background-color: #fff !important;
+}
+
+.file-upload {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-upload {
+    padding: 10px 20px;
+    background-color: #D4A373;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-upload:hover {
+    background-color: #c49363;
+}
+
+.file-name {
+    font-size: 0.9rem;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.submit-btn {
+    padding: 12px 32px;
+    margin-top: var(--spacing-md);
+    width: auto;
 }
 
 .consultation-card {
@@ -40,31 +106,143 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.btn-dark {
+.consultation-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: #000;
+}
+
+.consultation-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.book-btn {
     background-color: var(--primary);
     color: #fff;
     border: none;
     padding: 12px 32px;
     border-radius: 8px;
     font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
 }
 
+.book-btn:hover {
+    background-color: #c49363;
+    transform: translateY(-2px);
+}
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .contact-grid {
+        gap: var(--spacing-lg);
+    }
+
+    .section-title-left {
+        font-size: 1.75rem;
+    }
+}
+
+/* Mobile (max 768px) */
 @media (max-width: 768px) {
+    .contact-section {
+        padding: var(--spacing-lg) 0;
+    }
+
     .section-title-left {
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-lg);
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
+        gap: var(--spacing-lg);
     }
 
     .contact-form {
         max-width: 100%;
     }
 
+    .file-upload {
+        flex-wrap: wrap;
+    }
+
+    .file-name {
+        flex: 1;
+        min-width: 150px;
+    }
+
     .submit-btn {
         width: 100%;
+    }
+
+    .consultation-card {
+        padding: var(--spacing-lg);
+    }
+
+    .consultation-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .book-btn {
+        width: 100%;
+    }
+}
+
+/* Small Mobile (max 480px) */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: var(--spacing-md) 0;
+    }
+
+    .section-title-left {
+        font-size: 1.25rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .contact-grid {
+        gap: var(--spacing-md);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .btn-upload {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .file-upload {
+        gap: 8px;
+    }
+
+    .file-name {
+        font-size: 0.8rem;
+    }
+
+    .consultation-card {
+        padding: var(--spacing-md);
+    }
+
+    .consultation-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .consultation-card p {
+        font-size: 0.85rem;
+    }
+
+    .book-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }

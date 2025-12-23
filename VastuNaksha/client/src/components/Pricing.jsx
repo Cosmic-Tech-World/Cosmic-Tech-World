@@ -6,7 +6,7 @@ const Pricing = () => {
         {
             name: "Basic Vastu Plan",
             bestFor: "Small homes / budget planning / vastu guidance only",
-            price: "₹25,000",
+            price: "₹15,000",
             sqftPrice: "₹8 / sqft",
             sqftOld: "₹15 / sqft",
             includes: [

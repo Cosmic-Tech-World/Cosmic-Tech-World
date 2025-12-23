@@ -14,6 +14,8 @@ const Footer = () => {
                 </div>
                 <div className="footer-copyright">
                     © 2025 Vastunaksha. All rights reserved • Made with care
+                    <br />
+                    A Product by Cosmic Thinking Lab
                 </div>
                 <div className="footer-links">
                     <a href="#privacy">Privacy</a>
