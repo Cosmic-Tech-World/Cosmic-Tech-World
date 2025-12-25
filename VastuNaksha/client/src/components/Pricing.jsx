@@ -56,11 +56,10 @@ const Pricing = () => {
             ]
         },
         {
-            name: "Premium Complete Home Design",
+            name: "Premium Vastu Floor Design Plan",
             bestFor: "Luxury homes / turnkey design / visual clarity",
             price: "₹80,000",
-            sqftPrice: "₹28 / sqft",
-            sqftOld: "₹45 / sqft",
+            sqftPrice: "₹32 / sqft",
             includes: [
                 "Complete vastu + architectural planning",
                 "Detailed working drawings",
@@ -101,7 +100,7 @@ const Pricing = () => {
                                 <p className="plan-best-for">Best for: {plan.bestFor}</p>
                                 <div className="plan-price-main">{plan.price}</div>
                                 <div className="plan-sqft-row">
-                                    <span className="sqft-old">{plan.sqftOld}</span>
+                                    {plan.sqftOld && <span className="sqft-old">{plan.sqftOld}</span>}
                                     <span className="sqft-current">{plan.sqftPrice}</span>
                                 </div>
                             </div>

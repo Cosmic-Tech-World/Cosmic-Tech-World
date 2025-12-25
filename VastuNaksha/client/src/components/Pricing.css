@@ -17,7 +17,7 @@
 }
 
 .pricing-card {
-    border: 2px solid #D4A373;
+    border: 2px solid #452905;
     border-radius: 20px;
     padding: 40px var(--spacing-lg);
     position: relative;
@@ -38,13 +38,13 @@
     /* Inset from right */
     background-color: #fff;
     /* Match card bg */
-    color: #D4A373;
+    color: #452905;
     /* Match border color */
     padding: 2px 16px;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 700;
-    border: 2px solid #D4A373;
+    border: 2px solid #452905;
     /* Match card border */
     text-transform: capitalize;
     z-index: 2;
@@ -59,9 +59,21 @@
 }
 
 .pricing-card:hover .active-badge {
-    background-color: #FFD700;
+    background: linear-gradient(110deg, #FFD700 0%, #FFFACD 50%, #FFD700 100%);
+    background-size: 200% 100%;
     border-color: #FFD700;
-    color: #fff;
+    color: #452905;
+    animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .plan-header {
@@ -108,7 +120,7 @@
 }
 
 .sqft-current {
-    color: #D4A373;
+    color: #452905;
 }
 
 .plan-includes {
@@ -141,7 +153,7 @@
     content: "•";
     position: absolute;
     left: 0;
-    color: #D4A373;
+    color: #452905;
 }
 
 .plan-features-section h4 {

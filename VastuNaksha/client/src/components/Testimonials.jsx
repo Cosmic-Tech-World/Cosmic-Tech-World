@@ -5,34 +5,31 @@ const Testimonials = () => {
     const reviews = [
         {
             text: "The platform's custom design has accelerated our workflow and boosted team productivity by 40%. The automated features are game changing.",
-            author: "Sarah Williams",
+            author: "Rajesh Kumar",
             role: "Project Manager",
-            company: "TechBuild Inc."
+            company: "TechBuild India",
+            image: "https://ui-avatars.com/api/?name=Rajesh+Kumar&background=D4A373&color=fff&size=80"
         },
         {
             text: "Simply amazing customer support and powerful tools. The analysis was precise and actionable. Helped us fix our house plan before making costly mistakes.",
-            author: "Michael Chen",
+            author: "Sunita Gupta",
             role: "CEO & Founder",
-            company: "Modern Living"
+            company: "Modern Living",
+            image: "https://ui-avatars.com/api/?name=Sunita+Gupta&background=D4A373&color=fff&size=80"
         },
         {
             text: "Seamless integration into our existing tools made this transition effortless. The real-time collaboration features have improved our remote work greatly.",
-            author: "Emily Rodriguez",
+            author: "Vikram Singh",
             role: "Operations Director",
-            company: "Global Corp"
+            company: "Global Corp",
+            image: "https://ui-avatars.com/api/?name=Vikram+Singh&background=D4A373&color=fff&size=80"
         },
-        // Duplicate for variety
         {
             text: "VastuNaksha helped me visualize the energy flow perfectly. The report was detailed and easy to understand for my clients.",
-            author: "Ankit Sharma",
+            author: "Ananya Sharma",
             role: "Architect",
-            company: "Sharma Designs"
-        },
-        {
-            text: "Best tool for instant vastu corrections. Highly recommended for interior designers looking for quick audits.",
-            author: "Priya Mehta",
-            role: "Interior Designer",
-            company: "Creative Spaces"
+            company: "Sharma Designs",
+            image: "https://ui-avatars.com/api/?name=Ananya+Sharma&background=D4A373&color=fff&size=80"
         }
     ];
 
@@ -53,7 +50,9 @@ const Testimonials = () => {
                                 <div className="stars">★★★★★</div>
                                 <p className="review-text">"{review.text}"</p>
                                 <div className="reviewer-info">
-                                    <div className="reviewer-avatar"></div>
+                                    <div className="reviewer-avatar">
+                                        <img src={review.image} alt={review.author} />
+                                    </div>
                                     <div className="reviewer-details">
                                         <h4 className="reviewer-name">{review.author}</h4>
                                         <span className="reviewer-role">{review.role}</span>

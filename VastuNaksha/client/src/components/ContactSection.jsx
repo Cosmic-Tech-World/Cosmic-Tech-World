@@ -112,7 +112,7 @@ const ContactSection = () => {
                                     onChange={handleInputChange}
                                     required
                                     placeholder="Describe your requirements"
-                                    rows="4"
+                                    rows="3"
                                 />
                             </div>
                             <div className="form-group">

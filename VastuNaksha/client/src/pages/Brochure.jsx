@@ -9,24 +9,24 @@ const Brochure = () => {
         try {
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
-            
+
             // Set font and colors
             doc.setFont('helvetica', 'bold');
             doc.setFontSize(20);
             doc.setTextColor(212, 163, 115);
-            
+
             // Title
             doc.text('VastuNaksha Digital Brochure', 20, 30);
-            
+
             // Reset font for content
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(12);
             doc.setTextColor(0, 0, 0);
-            
+
             // Content
             let yPos = 50;
             const lineHeight = 7;
-            
+
             const content = [
                 '15 Years of Experience in Vastu Shastra',
                 '',
@@ -34,7 +34,7 @@ const Brochure = () => {
                 '',
                 'Our Expertise:',
                 '• 15+ Years of Professional Experience',
-                '• 5000+ Successful Projects Completed', 
+                '• 5000+ Successful Projects Completed',
                 '• Traditional Vastu Masters & Modern Architects',
                 '• Digital Precision with Ancient Wisdom',
                 '',
@@ -74,13 +74,13 @@ const Brochure = () => {
                 '',
                 '© 2025 VastuNaksha | A Product by Cosmic Thinking Lab'
             ];
-            
+
             content.forEach((line) => {
                 if (yPos > 270) {
                     doc.addPage();
                     yPos = 20;
                 }
-                
+
                 if (line.includes('SIGNATURE SERVICES') || line.includes('OUR PROVEN PROCESS') || line.includes('CONTACT US')) {
                     doc.setFont('helvetica', 'bold');
                     doc.setFontSize(14);
@@ -94,11 +94,11 @@ const Brochure = () => {
                     doc.setFontSize(10);
                     doc.setTextColor(0, 0, 0);
                 }
-                
+
                 doc.text(line, 20, yPos);
                 yPos += lineHeight;
             });
-            
+
             doc.save('VastuNaksha-Premium-Brochure.pdf');
         } catch (error) {
             console.error('PDF generation failed:', error);
@@ -166,9 +166,9 @@ const Brochure = () => {
                         <div className="expertise-card">
                             <div className="card-icon">
                                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
                             <h3>Vastu Mastery</h3>
@@ -177,7 +177,7 @@ const Brochure = () => {
                         <div className="expertise-card">
                             <div className="card-icon">
                                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
                             <h3>Architectural Precision</h3>
@@ -186,7 +186,7 @@ const Brochure = () => {
                         <div className="expertise-card">
                             <div className="card-icon">
                                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
                             <h3>Design Innovation</h3>
@@ -195,7 +195,7 @@ const Brochure = () => {
                         <div className="expertise-card">
                             <div className="card-icon">
                                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                             </div>
                             <h3>Digital Excellence</h3>
@@ -216,8 +216,8 @@ const Brochure = () => {
                         <div className="service-tier bronze">
                             <div className="tier-badge">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 Foundation
                             </div>
@@ -234,12 +234,12 @@ const Brochure = () => {
                                 <div className="feature">✓ Directional Guidance</div>
                             </div>
                         </div>
-                        
+
                         <div className="service-tier silver popular">
                             <div className="tier-badge">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2"/>
-                                    <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" stroke="currentColor" strokeWidth="2"/>
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="2" />
+                                    <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" stroke="currentColor" strokeWidth="2" />
                                 </svg>
                                 Harmony
                             </div>
@@ -257,11 +257,11 @@ const Brochure = () => {
                                 <div className="feature">✓ Construction-Ready Files</div>
                             </div>
                         </div>
-                        
+
                         <div className="service-tier gold">
                             <div className="tier-badge">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
                                 Luxury
                             </div>
@@ -339,41 +339,41 @@ const Brochure = () => {
                             <button className="premium-download-btn" onClick={handleDownload}>
                                 <span className="btn-icon">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                        <polyline points="7,10 12,15 17,10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                        <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <polyline points="7,10 12,15 17,10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                                     </svg>
                                 </span>
                                 Download PDF Brochure
                                 <span className="btn-arrow">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <line x1="7" y1="17" x2="17" y2="7" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                                        <polyline points="7,7 17,7 17,17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <line x1="7" y1="17" x2="17" y2="7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                        <polyline points="7,7 17,7 17,17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </span>
                             </button>
                             <div className="cta-footer">
-                                <p>Ready to transform your space? <Link to="/#contact">Start your project today</Link></p>
+                                <p>Ready to transform your space? <Link to="/" onClick={() => setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100)}>Start your project today</Link></p>
                             </div>
                         </div>
                         <div className="cta-visual">
                             <div className="floating-elements">
                                 <div className="element element-1">
                                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                        <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
                                 <div className="element element-2">
                                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </div>
                                 <div className="element element-3">
                                     <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                                        <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2"/>
-                                        <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="2"/>
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+                                        <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2" />
+                                        <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="2" />
                                     </svg>
                                 </div>
                             </div>

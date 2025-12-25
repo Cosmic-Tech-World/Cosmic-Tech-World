@@ -106,6 +106,7 @@ const DirectionAnalysis = () => {
                                     className="compass-img"
                                     style={{ transform: `rotate(${-heading}deg)` }}
                                 />
+                                <div className="compass-white-circle"></div>
                                 <div className="compass-center-dot"></div>
                             </div>
 
@@ -139,16 +140,8 @@ const DirectionAnalysis = () => {
                                         value={heading}
                                         onChange={(e) => setHeading(Number(e.target.value))}
                                         className="compass-slider"
+                                        style={{ '--slider-val': `${(heading / 360) * 100}%` }}
                                     />
-
-                                    {/* Debug Info */}
-                                    <div className="sensor-debug" style={{ marginTop: '20px', fontSize: '0.75rem', color: '#999', textAlign: 'left', background: '#f0f0f0', padding: '10px', borderRadius: '4px' }}>
-                                        <strong>Device Sensor Stats:</strong><br />
-                                        Alpha (Z-axis): {sensorData.alpha}<br />
-                                        Beta (X-axis): {sensorData.beta}<br />
-                                        Gamma (Y-axis): {sensorData.gamma}<br />
-                                        {!sensorData.alpha && <span style={{ color: 'orange' }}>Waiting for motion... (If values stay null, device has no sensors)</span>}
-                                    </div>
                                 </div>
                             </div>
                         </div>

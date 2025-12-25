@@ -1,7 +1,7 @@
 :root {
   --primary: #4A3B2C;
-  --accent: #D4A373;
-  --bg-light: #FAF3F0;
+  --accent: #452905;
+  --bg-light: #FAF6F3;
   --text-main: #333333;
   --text-white: #ffffff;
   --text-muted: #666666;
@@ -13,6 +13,10 @@
   --spacing-xl: 64px;
 
   --container-width: 1200px;
+}
+
+[id] {
+  scroll-margin-top: 80px;
 }
 
 * {

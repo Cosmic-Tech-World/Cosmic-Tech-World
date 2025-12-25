@@ -23,10 +23,10 @@
 }
 
 .step-item {
-  background: linear-gradient(90deg, #FFFFFF 0%, #F5B67B 100%);
+  background: linear-gradient(90deg, #fefefe 10%, #f48506 150%);
   padding: var(--spacing-md) var(--spacing-lg);
   border-radius: 8px;
-  color: #000;
+  color: #333;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease-out forwards;
   opacity: 0;
@@ -66,13 +66,13 @@
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 4px;
-  color: #000;
+  color: #333;
 }
 
 .step-desc {
   font-size: 0.9rem;
   line-height: 1.4;
-  color: #222;
+  color: #555;
 }
 
 .how-image {
@@ -99,8 +99,8 @@
 
 .how-graphic-img {
   width: 100%;
-  max-width: 400px;
-  /* Slightly smaller than pattern */
+  max-width: 530px;
+  /* Reduced from 550px to 530px */
   height: auto;
   position: relative;
   z-index: 1;
@@ -141,5 +141,19 @@
 
   .how-pattern-bg {
     width: 90%;
+  }
+
+  .how-graphic-img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-graphic-img {
+    max-width: 320px;
+  }
+
+  .how-image {
+    min-height: 300px;
   }
 }

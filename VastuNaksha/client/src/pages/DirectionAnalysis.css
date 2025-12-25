@@ -48,7 +48,7 @@
 
 .compass-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,11 +57,10 @@
 
 .compass-visual-wrapper {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    background: #fff;
+    /* Removed background and shadow for a cleaner PNG look */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,16 +74,13 @@
 }
 
 .compass-center-dot {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background-color: red;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    z-index: 10;
+    display: none;
+    /* Removed as requested for a clean PNG look */
+}
+
+.compass-white-circle {
+    display: none;
+    /* Removed as requested for a clean PNG look */
 }
 
 .compass-arrow-marker {
@@ -163,8 +159,50 @@
 }
 
 .compass-slider {
+    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #0066cc var(--slider-val), #a0a0a0 var(--slider-val));
+    border-radius: 5px;
+    outline: none;
     cursor: pointer;
+    margin: 20px 0;
+}
+
+/* Webkit (Chrome, Safari, Edge, Opera) */
+.compass-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    position: relative;
+    /* Creating the centered blue dot */
+    background-image: radial-gradient(circle, #0066cc 6px, #ffffff 7px);
+}
+
+/* Mozilla (Firefox) */
+.compass-slider::-moz-range-thumb {
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    background-image: radial-gradient(circle, #0066cc 6px, #ffffff 7px);
+}
+
+.compass-slider::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #0066cc var(--slider-val), #a0a0a0 var(--slider-val));
+    border-radius: 5px;
 }
 
 @media (max-width: 1024px) {

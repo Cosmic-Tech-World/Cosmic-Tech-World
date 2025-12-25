@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import mandala from '../assets/hero-mandala.png';
+import ExperienceIcon from '../assets/experience-icon.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -33,7 +34,7 @@ const Hero = () => {
                         <span>n</span>
                         <span>c</span>
                         <span>e</span>
-                        <img src="https://icon-library.com/images/experience-icon-png/experience-icon-png-12.jpg" alt="Experience" className="experience-icon" />
+                        <img src={ExperienceIcon} alt="Experience" className="experience-icon" />
                     </div>
                     <p className="hero-subtitle">
                         Get accurate Vastu reports and expert guidance – all online.<br />
