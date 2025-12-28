@@ -1,0 +1,5 @@
+- **Immersive 3D Hero Section**: Create a visually striking landing area featuring an interactive 3D cosmic element (such as a rotating planet, particle network, or nebula) that responds to mouse movement or scrolling to immediately establish the "Cosmic" brand identity.
+- **Dark "Space-Futurist" Aesthetic**: Implement a cohesive dark-mode design system using deep blacks, starry backgrounds, and neon accents (purples/blues) combined with modern, clean typography to reflect a high-end software agency.
+- **Core Business Content Sections**: Develop distinct sections for "Services" (Software Development, Web Solutions), "About" (The 'Thinking Labs' philosophy), and "Contact," ensuring the visual theme flows seamlessly into the informational content.
+- **Interactive UI Animations**: Apply smooth scroll behaviors and subtle entrance animations (fade-ins, slides) for text and cards to maintain a fluid, high-tech feel as the user navigates down the page.
+- **Responsive & Performant Layout**: Ensure the 3D elements and layout adapt gracefully to mobile devices, ensuring text remains readable and the site remains performant on smaller screens.
