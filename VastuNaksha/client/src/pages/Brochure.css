@@ -687,10 +687,34 @@
     margin-top: 3rem;
 }
 
-.point h4 {
+.point {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+}
+
+.point-icon {
+    background: #fdfaf7;
+    color: #D4A373;
+    padding: 0.8rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fae1cd;
+}
+
+.point-text h4 {
     color: #c49363;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.point-text p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
 }
 
 .wisdom-image-grid {
@@ -704,14 +728,45 @@
 .wisdom-box {
     background: #fdfaf7;
     border: 1px solid #fae1cd;
-    height: 200px;
-    border-radius: 20px;
+    min-height: 240px;
+    padding: 2.5rem;
+    border-radius: 24px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(212, 163, 115, 0.05);
+}
+
+.wisdom-box:hover {
+    transform: translateY(-30px) scale(1.02) !important;
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(212, 163, 115, 0.15);
+    border-color: #D4A373;
+}
+
+.box-icon {
     color: #D4A373;
-    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(212, 163, 115, 0.1);
+}
+
+.wisdom-box h3 {
+    color: #333;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.wisdom-box p {
+    color: #D4A373;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 .box-1 {
@@ -975,13 +1030,19 @@
         gap: 1.5rem;
     }
 
+    .point {
+        gap: 0.8rem;
+    }
+
     .wisdom-image-grid {
         grid-template-columns: 1fr;
         width: 100%;
+        gap: 1.5rem;
     }
 
     .wisdom-box {
-        height: 150px;
+        min-height: 180px;
+        padding: 1.5rem;
         transform: none !important;
     }
 

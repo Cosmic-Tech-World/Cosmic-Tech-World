@@ -194,18 +194,50 @@ const Brochure = () => {
                                 <p>Vastu Shastra is more than just a set of rules; it is a sophisticated understanding of how energy (Prana) interacts with physical spaces. By aligning your environment with the magnetic field of the Earth and the path of the Sun, we help you tap into the natural rhythms of the universe.</p>
                                 <div className="wisdom-points">
                                     <div className="point">
-                                        <h4>Magnetic Alignment</h4>
-                                        <p>Utilizing Earth's geomagnetic field for mental clarity.</p>
+                                        <div className="point-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2v20M2 12h20M12 2l4 4M12 2L8 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div className="point-text">
+                                            <h4>Magnetic Alignment</h4>
+                                            <p>Utilizing Earth's geomagnetic field for mental clarity.</p>
+                                        </div>
                                     </div>
                                     <div className="point">
-                                        <h4>Solar Energy</h4>
-                                        <p>Optimizing natural light for health and vitality.</p>
+                                        <div className="point-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="5" stroke="currentColor" strokeWidth="1.5" />
+                                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div className="point-text">
+                                            <h4>Solar Energy</h4>
+                                            <p>Optimizing natural light for health and vitality.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="wisdom-image-grid">
-                                <div className="wisdom-box box-1"><span>Balance</span></div>
-                                <div className="wisdom-box box-2"><span>Growth</span></div>
+                                <div className="wisdom-box box-1">
+                                    <div className="box-icon">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3 21h18M12 21V5M12 5l-7 3M12 5l7 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <h3>Balance</h3>
+                                    <p>Harmonizing contrasting energies for peace</p>
+                                </div>
+                                <div className="wisdom-box box-2">
+                                    <div className="box-icon">
+                                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 20V10M12 10l-4 4M12 10l4 4M4 4h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                            <path d="M8 20c0-2.209 1.791-4 4-4s4 1.791 4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                                        </svg>
+                                    </div>
+                                    <h3>Growth</h3>
+                                    <p>Aligning with prosperity and abundance</p>
+                                </div>
                             </div>
                         </div>
                     </div>
