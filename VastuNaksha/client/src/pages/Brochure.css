@@ -821,12 +821,32 @@
 
 .footer-contact h3 {
     color: #D4A373;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
 }
 
-.footer-contact p {
-    margin-bottom: 0.8rem;
-    opacity: 0.8;
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.footer-contact-item:hover {
+    color: #D4A373;
+    transform: translateX(5px);
+}
+
+.footer-contact-item svg {
+    stroke: #D4A373;
+    flex-shrink: 0;
+}
+
+.footer-contact-item p {
+    margin-bottom: 0 !important;
+    font-size: 0.95rem;
 }
 
 .footer-tagline {
@@ -987,6 +1007,10 @@
     .footer-tagline {
         align-items: center;
         text-align: center;
+    }
+
+    .footer-contact-item {
+        justify-content: center;
     }
 
     .footer-tagline {
