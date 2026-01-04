@@ -81,15 +81,14 @@
   align-items: center;
   position: relative;
   /* Needed for absolute positioning of background */
-  min-height: 400px;
-  /* Ensure space for the rotating background */
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .how-pattern-bg {
   position: absolute;
-  width: 120%;
-  /* Make it larger than the main image */
-  max-width: 550px;
+  width: 105%;
+  /* Tighter fit like desktop */
   height: auto;
   z-index: 0;
   /* Behind */
@@ -132,19 +131,25 @@
 @media (max-width: 768px) {
   .how-container {
     grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .how-content {
+    text-align: center;
   }
 
   .how-image {
     order: -1;
-    min-height: 350px;
+    margin: 0 auto 3rem auto;
   }
 
   .how-pattern-bg {
-    width: 90%;
+    width: 105%;
   }
 
   .how-graphic-img {
-    max-width: 400px;
+    max-width: 350px;
+    /* Reduce size slightly */
   }
 }
 

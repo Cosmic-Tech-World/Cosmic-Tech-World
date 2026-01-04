@@ -105,6 +105,8 @@ const DirectionAnalysis = () => {
                                     alt="Live Compass"
                                     className="compass-img"
                                     style={{ transform: `rotate(${-heading}deg)` }}
+                                    loading="eager"
+                                    fetchPriority="high"
                                 />
                                 <div className="compass-white-circle"></div>
                                 <div className="compass-center-dot"></div>

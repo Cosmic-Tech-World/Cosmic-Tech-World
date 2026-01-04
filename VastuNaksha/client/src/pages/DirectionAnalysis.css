@@ -57,8 +57,10 @@
 
 .compass-visual-wrapper {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 90vw;
+    max-width: 450px;
+    aspect-ratio: 1;
+    height: auto;
     border-radius: 50%;
     /* Removed background and shadow for a cleaner PNG look */
     display: flex;
@@ -209,5 +211,23 @@
     .da-main-content {
         flex-direction: column;
         gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .da-container {
+        padding: 40px 20px;
+    }
+
+    .da-header {
+        margin-bottom: 30px;
+    }
+
+    .da-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .da-main-content {
+        gap: 30px;
     }
 }
