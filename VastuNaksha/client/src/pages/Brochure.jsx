@@ -51,27 +51,18 @@ const Brochure = () => {
             });
 
             const imgData = canvas.toDataURL('image/jpeg', 0.95);
+
+            const imgWidth = 210; // Fixed width (A4 standard) in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+            // Initialize jsPDF with custom page size [width, height] to make it a single scrolling page
             const pdf = new window.jspdf.jsPDF({
                 orientation: 'portrait',
                 unit: 'mm',
-                format: 'a4'
+                format: [imgWidth, imgHeight]
             });
 
-            const imgWidth = 210; // A4 width in mm
-            const pageHeight = 297; // A4 height in mm
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-            let heightLeft = imgHeight;
-            let position = 0;
-
-            pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-            heightLeft -= pageHeight;
-
-            while (heightLeft >= 0) {
-                position = heightLeft - imgHeight;
-                pdf.addPage();
-                pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-                heightLeft -= pageHeight;
-            }
+            pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth, imgHeight);
 
             pdf.save('VastuNaksha-Brochure.pdf');
         } catch (error) {
