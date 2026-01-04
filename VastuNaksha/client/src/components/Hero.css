@@ -297,9 +297,10 @@
         max-width: 300px;
         top: 0;
         transform: none;
-        margin-top: var(--spacing-sm);
+        margin: var(--spacing-sm) auto;
         order: -1;
         opacity: 0.8;
+        justify-content: center;
     }
 
     .hero-mandala-img {
