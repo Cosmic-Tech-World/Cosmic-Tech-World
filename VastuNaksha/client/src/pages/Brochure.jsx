@@ -171,6 +171,70 @@ const Brochure = () => {
                     </div>
                 </section>
 
+                {/* Ancient Wisdom & Modern Science */}
+                <section className="wisdom-science">
+                    <div className="container">
+                        <div className="wisdom-content">
+                            <div className="wisdom-text">
+                                <span className="wisdom-badge">The Philosophy</span>
+                                <h2>Ancient Wisdom Meets Modern Science</h2>
+                                <p>Vastu Shastra is more than just a set of rules; it is a sophisticated understanding of how energy (Prana) interacts with physical spaces. By aligning your environment with the magnetic field of the Earth and the path of the Sun, we help you tap into the natural rhythms of the universe.</p>
+                                <div className="wisdom-points">
+                                    <div className="point">
+                                        <h4>Magnetic Alignment</h4>
+                                        <p>Utilizing Earth's geomagnetic field for mental clarity.</p>
+                                    </div>
+                                    <div className="point">
+                                        <h4>Solar Energy</h4>
+                                        <p>Optimizing natural light for health and vitality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="wisdom-image-grid">
+                                <div className="wisdom-box box-1"><span>Balance</span></div>
+                                <div className="wisdom-box box-2"><span>Growth</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* The Five Elements (Pancha Bhoota) */}
+                <section className="elements-section">
+                    <div className="container">
+                        <div className="section-header">
+                            <h2>The Five Elements</h2>
+                            <p>The foundation of every harmonious space lies in the balance of Pancha Bhoota</p>
+                        </div>
+                        <div className="elements-grid">
+                            <div className="element-card earth">
+                                <div className="element-icon">🌱</div>
+                                <h3>Earth (Prithvi)</h3>
+                                <p>Stability, groundedness, and patience. Governs the South-West.</p>
+                            </div>
+                            <div className="element-card water">
+                                <div className="element-icon">💧</div>
+                                <h3>Water (Jal)</h3>
+                                <p>Purity, flow, and emotions. Governs the North-East.</p>
+                            </div>
+                            <div className="element-card fire">
+                                <div className="element-icon">🔥</div>
+                                <h3>Fire (Agni)</h3>
+                                <p>Transformation, energy, and will. Governs the South-East.</p>
+                            </div>
+                            <div className="element-card air">
+                                <div className="element-icon">🌪️</div>
+                                <h3>Air (Vayu)</h3>
+                                <p>Movement, communication, and expansion. Governs the North-West.</p>
+                            </div>
+                            <div className="element-card space">
+                                <div className="element-icon">🌌</div>
+                                <h3>Space (Akasha)</h3>
+                                <p>Pure potential, listening, and intuition. Governs the Center.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Premium Services */}
                 <section className="premium-services">
                     <div className="container">
@@ -294,6 +358,68 @@ const Brochure = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Portfolio Highlights */}
+                <section className="portfolio-section">
+                    <div className="container">
+                        <div className="section-header">
+                            <h2>Architectural Mastery</h2>
+                            <p>A glimpse into our diverse portfolio of Vastu-compliant designs</p>
+                        </div>
+                        <div className="portfolio-grid">
+                            <div className="portfolio-item">
+                                <div className="portfolio-image">
+                                    <img src={heroImage} alt="Luxury Villa Design" />
+                                    <div className="portfolio-overlay">
+                                        <h3>Royal Villa</h3>
+                                        <span>North-Facing Excellence</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="portfolio-item">
+                                <div className="portfolio-image">
+                                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&auto=format&fit=crop&q=60" alt="Modern Apartment" />
+                                    <div className="portfolio-overlay">
+                                        <h3>Zen Apartment</h3>
+                                        <span>Urban Vastu Solution</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="portfolio-item">
+                                <div className="portfolio-image">
+                                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&auto=format&fit=crop&q=60" alt="Commercial Space" />
+                                    <div className="portfolio-overlay">
+                                        <h3>Corporate Hub</h3>
+                                        <span>Prosperity Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Corporate Footer Info */}
+                <footer className="brochure-corporate-footer">
+                    <div className="container">
+                        <div className="footer-content">
+                            <div className="footer-brand">
+                                <img src={logo} alt="VastuNaksha" className="footer-logo" />
+                                <p>Harmonizing lives through ancient wisdom and modern precision since 2008.</p>
+                            </div>
+                            <div className="footer-contact">
+                                <h3>Connect With Us</h3>
+                                <p>📍 123 Vastu Enclave, Design District</p>
+                                <p>📞 +91 98765 43210</p>
+                                <p>📧 contact@vastunaksha.online</p>
+                                <p>🌐 www.vastunaksha.online</p>
+                            </div>
+                            <div className="footer-tagline">
+                                <p>© 2026 VastuNaksha. All rights reserved.</p>
+                                <p>Design | Prosperity | Harmony</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
             </div>
 
             {/* Download CTA */}

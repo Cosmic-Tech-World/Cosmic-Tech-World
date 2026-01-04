@@ -614,6 +614,196 @@
     }
 }
 
+/* Ancient Wisdom & Science */
+.wisdom-science {
+    padding: 6rem 0;
+    background: #fff;
+    position: relative;
+}
+
+.wisdom-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.wisdom-text {
+    flex: 1;
+}
+
+.wisdom-badge {
+    color: #D4A373;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.wisdom-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.wisdom-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.point h4 {
+    color: #c49363;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.wisdom-image-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    position: relative;
+}
+
+.wisdom-box {
+    background: #fdfaf7;
+    border: 1px solid #fae1cd;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #D4A373;
+    font-size: 1.2rem;
+}
+
+.box-1 {
+    transform: translateY(-20px);
+}
+
+.box-2 {
+    transform: translateY(20px);
+}
+
+/* Five Elements */
+.elements-section {
+    padding: 6rem 0;
+    background: #fafafa;
+}
+
+.elements-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+.element-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.element-card:hover {
+    transform: translateY(-10px);
+}
+
+.element-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Portfolio Highlights */
+.portfolio-section {
+    padding: 6rem 0;
+    background: #fff;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.portfolio-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Corporate Footer */
+.brochure-corporate-footer {
+    padding: 4rem 0;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.footer-logo {
+    height: 60px;
+    filter: brightness(0) invert(1);
+    margin-bottom: 2rem;
+}
+
+.footer-contact h3 {
+    color: #D4A373;
+    margin-bottom: 1.5rem;
+}
+
+.footer-contact p {
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+}
+
+.footer-tagline {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    opacity: 0.6;
+}
+
 @keyframes float {
 
     0%,
@@ -714,5 +904,72 @@
 
     .floating-mandala {
         display: none;
+    }
+
+    /* Wisdom & Science Mobile */
+    .wisdom-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .wisdom-text h2 {
+        font-size: 2rem;
+    }
+
+    .wisdom-points {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .wisdom-image-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .wisdom-box {
+        height: 150px;
+        transform: none !important;
+    }
+
+    /* Elements Mobile */
+    .elements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .element-card:last-child {
+        grid-column: span 2;
+    }
+
+    /* Portfolio Mobile */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Corporate Footer Mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-contact,
+    .footer-tagline {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-tagline {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .elements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .element-card:last-child {
+        grid-column: span 1;
     }
 }
