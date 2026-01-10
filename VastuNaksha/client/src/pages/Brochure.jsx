@@ -31,6 +31,17 @@ const Brochure = () => {
                 x: 0,
                 y: 0,
                 onclone: (clonedDoc) => {
+                    // Hide Return Home and Download buttons in PDF
+                    const backLink = clonedDoc.querySelector('.back-link');
+                    const downloadBtn = clonedDoc.querySelector('.header-download-btn');
+                    const headerContainer = clonedDoc.querySelector('.brochure-header .container');
+
+                    if (backLink) backLink.style.display = 'none';
+                    if (downloadBtn) downloadBtn.style.display = 'none';
+                    if (headerContainer) {
+                        headerContainer.style.justifyContent = 'center';
+                    }
+
                     // Fix Hero Text Gradient issue
                     const heroH2 = clonedDoc.querySelector('.hero-content h2');
                     if (heroH2) {
