@@ -42,6 +42,38 @@ const Brochure = () => {
                         headerContainer.style.justifyContent = 'center';
                     }
 
+                    // Fix Footer Logo Color manually using canvas manipulation
+                    // This is more reliable than CSS filters for html2canvas
+                    const originalLogo = document.querySelector('.footer-logo');
+                    const clonedLogo = clonedDoc.querySelector('.footer-logo');
+
+                    if (originalLogo && clonedLogo) {
+                        try {
+                            const canvas = document.createElement('canvas');
+                            const ctx = canvas.getContext('2d');
+                            canvas.width = originalLogo.naturalWidth;
+                            canvas.height = originalLogo.naturalHeight;
+
+                            // Draw original image
+                            ctx.drawImage(originalLogo, 0, 0);
+
+                            // Composite white color over the varying opacity of the image
+                            ctx.globalCompositeOperation = 'source-in';
+                            ctx.fillStyle = '#ffffff';
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                            // Reset composite operation
+                            ctx.globalCompositeOperation = 'source-over';
+
+                            // Replace src and remove filter
+                            clonedLogo.src = canvas.toDataURL();
+                            clonedLogo.style.filter = 'none';
+                            clonedLogo.style.webkitFilter = 'none';
+                        } catch (err) {
+                            console.error('Failed to process logo:', err);
+                        }
+                    }
+
                     // Fix Hero Text Gradient issue
                     const heroH2 = clonedDoc.querySelector('.hero-content h2');
                     if (heroH2) {
@@ -518,10 +550,9 @@ const Brochure = () => {
                                     <p>www.vastunaksha.online</p>
                                 </div>
                             </div>
-                            <div className="footer-tagline">
-                                <p>© 2026 VastuNaksha. All rights reserved.</p>
-                                <p>Design | Prosperity | Harmony</p>
-                            </div>
+                        </div>
+                        <div className="footer-copyright">
+                            <p>© 2026 VastuNaksha. All rights reserved. | Design | Prosperity | Harmony</p>
                         </div>
                     </div>
                 </footer>

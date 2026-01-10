@@ -516,72 +516,94 @@
 
 /* Download CTA */
 .download-cta {
-    padding: 3rem 0;
-    background: linear-gradient(135deg, #D4A373 0%, #c49363 100%);
+    padding: 1rem 0;
+    background: #fff;
 }
 
 .cta-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 25px;
-    padding: 2.5rem;
+    background: linear-gradient(135deg, #D4A373 0%, #c49363 100%);
+    border-radius: 16px;
+    padding: 1.5rem 1rem;
     text-align: center;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 20px 40px rgba(212, 163, 115, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cta-content h2 {
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cta-content p {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-    max-width: 600px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
 .premium-download-btn {
     background: #fff;
-    color: #D4A373;
+    color: #c49363;
     border: none;
     padding: 1.2rem 3rem;
-    border-radius: 50px;
-    font-size: 1.2rem;
+    border-radius: 6px;
+    font-size: 1rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 1rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .premium-download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    background: #f8f9fa;
 }
 
 .btn-icon svg,
 .btn-arrow svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     stroke: currentColor;
 }
 
 .cta-footer {
-    margin-top: 2rem;
+    margin-top: 1rem;
+}
+
+.cta-footer p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
 }
 
 .cta-footer a {
     color: #fff;
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.cta-footer a:hover {
+    color: #fff;
+    border-color: #fff;
 }
 
 .floating-elements {
@@ -595,8 +617,8 @@
 
 .element {
     position: absolute;
-    opacity: 0.3;
-    animation: float 6s ease-in-out infinite;
+    opacity: 0.1;
+    animation: float 8s ease-in-out infinite;
     color: #fff;
 }
 
@@ -607,20 +629,26 @@
 }
 
 .element-1 {
-    top: 20%;
-    left: 10%;
+    top: 15%;
+    left: 8%;
+    width: 60px;
+    height: 60px;
     animation-delay: 0s;
 }
 
 .element-2 {
-    top: 60%;
-    right: 15%;
+    top: 55%;
+    right: 12%;
+    width: 80px;
+    height: 80px;
     animation-delay: 2s;
 }
 
 .element-3 {
-    bottom: 20%;
-    left: 20%;
+    bottom: 15%;
+    left: 15%;
+    width: 50px;
+    height: 50px;
     animation-delay: 4s;
 }
 
@@ -863,14 +891,24 @@
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 4rem;
     align-items: start;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-copyright {
+    padding-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
 }
 
 .footer-logo {
     height: 60px;
     filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
     margin-bottom: 2rem;
 }
 
